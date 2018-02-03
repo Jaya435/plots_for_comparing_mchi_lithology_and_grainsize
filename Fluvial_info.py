@@ -1,17 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Sep 26 15:05:26 2017
-
-@author: s1217815
-"""
+#plots some fluvial information for the main channel of as many rivers as you would like, needs preprocessed information
+#created in ArcMap
 
 import numpy as np
-
 import matplotlib.pyplot as plt
-
 import os
-
-
 import math
 
 for fname in ('Fango.txt','Taravo.txt','Tavignano.txt'):
