@@ -1,25 +1,11 @@
 
-
-
-
 import numpy as np
-
 import matplotlib.pyplot as plt
-
 import matplotlib
-
-
-
 import string
-
 key = [1,2,3,4,5,6,7,8,9]
-
-
-
 regions = ['index0' ,"Siliclastic Rocks", "Volcano Sedimentary Sequence", "Granitic Rocks", "Rhyolitic Rocks", "Alluvium","Siliclastic and Chemical Rocks","Ultramafic Rocks", "Metamorphic Rocks", "Carbonatic Rocks"]
-colors= ['white',"#049FBB", "#5DF10A", "#BF5B3F", "#A95058", "#9C6BE1","#6CC43C","#7B3001", "#B3D407","#97CE66"]
-
-    
+colors= ['white',"#049FBB", "#5DF10A", "#BF5B3F", "#A95058", "#9C6BE1","#6CC43C","#7B3001", "#B3D407","#97CE66"]   
 #region_colors=dict(zip(rocktype,colors))
 #chi data from LSDTopoTools for all of Corsica
 data3=np.loadtxt('corsica_PP_chi_data_0.3.csv',skiprows=1,delimiter=',')   
@@ -32,8 +18,7 @@ fango = data3[data3[:,13]==50]
 taravo= data3[data3[:,13]==94]
 tavig = data4[data4[:,13]==62]
 #iterates through the basins
-for x in (fango,taravo,tavig):
-     
+for x in (fango,taravo,tavig):    
     if np.all(x[:,13]==50):
         loc=np.loadtxt('fango_location.txt')    #file containing flow_distance and chi information so site locations can be plotted on the profile
         labels = ['c0102','c0103','c0201','c0202','c0104','c0203','c0204','c0105']   
